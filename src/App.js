@@ -61,7 +61,7 @@ class App extends React.Component {
         <div className = 'weather-container'>
         
         <h2>{this.state.city_name}</h2>
-        <p className = 'temp'>{this.state.temperature ? this.state.temperature + " °C" : ""} {this.state.temperature ? <img src = {tempIcon}/> : null}</p>
+        <p className = 'temp'>{this.state.temperature ? this.state.temperature + " °C" : ""} {this.state.temperature ? <img src = {tempIcon} alt = 'temperature'/> : null}</p>
         <p>{this.state.description}</p>
         <img src = {`http://openweathermap.org/img/wn/${this.state.image}@2x.png`} alt=""/>
         <form>     
