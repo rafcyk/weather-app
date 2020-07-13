@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import tempIcon from './images/temp-icon.png'
 
+// 81EEBfDFd0bFaDafce024Ab067f9DAA6fD1DCeF9C4458375Aabf4EE0EA8AeE857C83eDa
+
 class App extends React.Component {
     state = {
       city: '',
@@ -18,7 +20,7 @@ class App extends React.Component {
     if(this.state.city.trim() === ''){
       alert('Please enter city name :)')
     } else {
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=metric&appid=d4fe046e07dbf46eb0aca2cd7e5ddab8`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&units=metric&appid=d4fe046e07dbf46eb0aca2cd7e5ddab8`)
       .then(res => res.json())
       .then(
         (data) => {
@@ -63,7 +65,7 @@ class App extends React.Component {
         <h2>{this.state.city_name}</h2>
         <p className = 'temp'>{this.state.temperature ? this.state.temperature + " °C" : ""} {this.state.temperature ? <img src = {tempIcon} alt = 'temperature'/> : null}</p>
         <p>{this.state.description}</p>
-        <img src = {`http://openweathermap.org/img/wn/${this.state.image}@2x.png`} alt=""/>
+        <img src = {`https://openweathermap.org/img/wn/${this.state.image}@2x.png`} alt=""/>
         <form>     
           <input type="text" value = {this.state.city} onChange = {this.handleChange} placeholder = 'Enter city name'/>
           <button onClick = {this.handleClick}>check</button>
