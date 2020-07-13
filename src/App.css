@@ -118,3 +118,14 @@ div.app h2{
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (max-width: 360px){
+  div.app div.header-container h1{
+    font-size: 4rem;
+  }
+
+  .weather-container form input{
+    font-size: 2.2rem;
+    padding: 5px 10px;
+  }
+}
